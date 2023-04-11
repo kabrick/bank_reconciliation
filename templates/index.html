@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bank Reconciliation</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap/bootstrap.min.css') }}">
+    <script src="{{ url_for('static', filename='js/jquery-3.6.4.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap/bootstrap.min.js') }}"></script>
+
+    <style>
+        .center {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			height: 80vh;
+			font-size: 4em;
+		}
+
+        .btn {
+			font-size: 1.5em;
+		}
+    </style>
+</head>
+
+<body style="background-color: #cae8d3">
+    <div class="center">
+		<p>Bank Reconciliation</p>
+	</div>
+	<div class="text-center">
+        <a class="btn btn-primary">New Reconciliation</a>
+        <a class="btn btn-primary">Reconciliation Reports</a>
+	</div>
+</body>
+</html>
