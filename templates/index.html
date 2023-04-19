@@ -1,34 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Bank Reconciliation</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap/bootstrap.min.css') }}">
-    <script src="{{ url_for('static', filename='js/jquery-3.6.4.min.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/bootstrap/bootstrap.min.js') }}"></script>
+{% extends "base.html" %}
 
-    <style>
-        .center {
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			height: 80vh;
-			font-size: 4em;
-		}
+{% block title %} Bank Reconciliation {% endblock %}
 
-        .btn {
-			font-size: 1.5em;
-		}
-    </style>
-</head>
+{% block content %}
 
-<body style="background-color: #cae8d3">
-    <div class="center">
-		<p>Bank Reconciliation</p>
-	</div>
-	<div class="text-center">
-        <a class="btn btn-primary">New Reconciliation</a>
+    <div class="white-box">
+		<h1 class="text-center">Bank Reconciliation</h1>
+
+		<p>Our bank reconciliation app simplifies the process of matching your accounting transactions with your bank statement, saving you time and reducing the risk of errors.
+            Connect your accounts and let our app handle the rest, so you can focus on what really matters - growing your business.</p>
+
+        <hr>
+
+        <a class="btn btn-primary" href="{{ url_for('import_records') }}">New Reconciliation</a>
         <a class="btn btn-primary">Reconciliation Reports</a>
 	</div>
-</body>
-</html>
+
+{% endblock %}

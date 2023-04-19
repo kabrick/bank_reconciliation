@@ -1,0 +1,82 @@
+{% extends "base.html" %}
+
+{% block title %} Import Records {% endblock %}
+
+{% block content %}
+
+    <div class="white-box">
+    <h1 class="text-center">Import Transactions</h1>
+    <br><br>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card text-center" id="import_system_records_card" style="border: 2px solid red; background-color: #ffcccc;">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-6">Use the button below to select file to import system transactions. The file must be in the format...</div>
+                        <div class="col-md-6"><i class="pull-right" id="import_system_records_text">No file selected</i></div>
+                    </div>
+
+                    <button id="import_system_records_btn" class="btn btn-primary mt-5">Import System Transactions</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card text-center" id="import_bank_records_card" style="border: 2px solid red; background-color: #ffcccc;">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-6">Use the button below to select file to import bank transactions. The file must be in the format...</div>
+                        <div class="col-md-6"><i class="pull-right" id="import_bank_records_text">No file selected</i></div>
+                    </div>
+
+                    <button id="import_bank_records_btn" class="btn btn-primary mt-5">Import Bank Transactions</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr class="mt-5">
+
+    <div class="text-center">
+        <button id="start_reconciliation_btn" class="btn btn-primary mt-5" onclick="window.location.href='{{ url_for('complete_reconciliation') }}'" disabled>Complete Reconciliation</button>
+    </div>
+
+	</div>
+
+    <script>
+        let are_bank_records_imported = false;
+
+        $("#import_bank_records_btn").click(function() {
+            $('#import_bank_records_text').text("File has been imported with 10,000 records");
+
+            are_bank_records_imported = true;
+
+            $("#import_bank_records_card").css({
+                border: "2px solid green",
+                backgroundColor: "#ccffcc"
+            });
+
+            if (are_bank_records_imported && are_system_records_imported) {
+                $('#start_reconciliation_btn').prop('disabled', false);
+            }
+        });
+
+        let are_system_records_imported = false;
+
+        $("#import_system_records_btn").click(function() {
+            $('#import_system_records_text').text("File has been imported with 10,000 records");
+
+            are_system_records_imported = true;
+
+            $("#import_system_records_card").css({
+                border: "2px solid green",
+                backgroundColor: "#ccffcc"
+            });
+
+            if (are_bank_records_imported && are_system_records_imported) {
+                $('#start_reconciliation_btn').prop('disabled', false);
+            }
+        });
+    </script>
+
+{% endblock %}

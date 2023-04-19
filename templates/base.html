@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %} Bank Reconciliation {% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/custom.css') }}">
+    <script src="{{ url_for('static', filename='js/jquery-3.6.4.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap/bootstrap.min.js') }}"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light">
+		<div class="collapse navbar-collapse" id="navbarNav">
+			<ul class="navbar-nav">
+				<li class="nav-item active">
+					<a class="nav-link"><h3 style="color: #fff"><b>Bank Reconciliation</b></h3></a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+
+    {% block content %}{% endblock %}
+
+    <nav class="navbar fixed-bottom text-center mx-auto">
+		<span class="navbar-text"> &copy; {{ current_year }} Bank Reconciliation </span>
+	</nav>
+</body>
+</html>

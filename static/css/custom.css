@@ -1,0 +1,77 @@
+body {
+    background-color: #f1f8e9; /* Light green background color */
+}
+
+.navbar {
+    background-color: #2E7D32; /* Green navbar background color */
+}
+
+.navbar-brand, .navbar-nav .nav-link, .navbar-text {
+    color: #fff; /* White navbar text color */
+}
+
+.white-box {
+    background-color: #fff; /* White container background color */
+    padding: 50px;
+    margin: 30px;
+    box-shadow: 0 0 10px #ccc; /* Grey shadow around container */
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    color: #2E7D32; /* Green text color */
+}
+
+.btn {
+    font-size: 1.1em;
+}
+
+.btn-primary:hover {
+    background-color: #757575; /* Grey hover background color */
+    border-color: #757575; /* Grey hover border color */
+}
+
+.fixed-bottom {
+    background-color: #2E7D32; /* Green bottom navbar background color */
+    color: #fff; /* White bottom navbar text color */
+    padding: 10px;
+}
+
+/*
+body {
+    background-color: #ECEFF1; !* Light grey background color *!
+}
+
+.navbar {
+    background-color: #37474F; !* Blue-grey navbar background color *!
+}
+
+.navbar-brand, .navbar-nav .nav-link {
+    color: #fff; !* White navbar text color *!
+}
+
+.white-box {
+    background-color: #fff; !* White container background color *!
+    padding: 50px;
+    margin: 30px;
+    box-shadow: 0 0 10px #B0BEC5; !* Grey shadow around container *!
+}
+
+h1, p {
+    color: #37474F; !* Blue-grey text color *!
+}
+
+.btn-primary {
+    background-color: #2196F3; !* Blue button background color *!
+    border-color: #2196F3; !* Blue button border color *!
+}
+
+.btn-primary:hover {
+    background-color: #B0BEC5; !* Grey hover background color *!
+    border-color: #B0BEC5; !* Grey hover border color *!
+}
+
+.fixed-bottom {
+    background-color: #37474F; !* Blue-grey bottom navbar background color *!
+    color: #fff; !* White bottom navbar text color *!
+    padding: 10px;
+}*/
